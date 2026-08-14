@@ -1,9 +1,7 @@
 package com.life.hellogit.controller;
 
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.Mapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import com.life.hellogit.entity.User;
+import org.springframework.web.bind.annotation.*;
 
 @RestController
 @RequestMapping("/user")
@@ -11,5 +9,9 @@ public class UserController {
     @GetMapping("/hello")
     public String hello() {
         return "Hello, Git呀!";
+    }
+    @GetMapping("login")
+    public String login(){
+        return "登录成功!";
     }
 }
