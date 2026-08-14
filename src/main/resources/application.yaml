@@ -1,4 +1,14 @@
 spring:
   application:
     name: HelloGit
+  datasource:
+    url: jdbc:mysql://localhost:3306/user?useUnicode=true&characterEncoding=UTF-8&serverTimezone=Asia/Shanghai&useSSL=false&allowPublicKeyRetrieval=true
+    username: root
+    password: jingjing
+    driver-class-name: com.mysql.cj.jdbc.Driver
 
+mybatis-plus:
+  mapper-locations: classpath:/mapper/**/*.xml
+  type-aliases-package: com.life.hellogit.entity
+  configuration:
+    map-underscore-to-camel-case: true
